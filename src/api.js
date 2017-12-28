@@ -13,8 +13,8 @@ const init =
             getValue: () => {
               return "A value";
             },
-            setValue: () => {
-              console.log("api:setValue");
+            setValue: value => {
+              console.log("api:setValue", value);
               return Promise.resolve();
             }
           }

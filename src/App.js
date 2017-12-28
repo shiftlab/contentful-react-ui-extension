@@ -21,10 +21,34 @@ class App extends Component {
     });
   }
 
+  handleClickUpdate = e => {
+    const { api, value } = this.state;
+    api.field.setValue(value);
+  };
+
+  handleChangeValue = e => {
+    this.setState({
+      value: e.target.value
+    });
+  };
+
   render() {
     const { value } = this.state;
 
-    return <div className="App">Value: {value}</div>;
+    return (
+      <div className="App">
+        <input
+          className="cf-form-input"
+          type="text"
+          value={value}
+          onChange={this.handleChangeValue}
+        />{" "}
+        <br />
+        <button className="cf-btn-primary" onClick={this.handleClickUpdate}>
+          Update
+        </button>
+      </div>
+    );
   }
 }
 
