@@ -8,6 +8,8 @@ This project was "ejected" from `create-react-app` in order to add the `HtmlWebp
 production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
 requirement since Contentful expects all content to be in one `.html` file.
 
+![Screenshot](/screenshot.png)
+
 ## Using this boilerplate
 
 Follow the [Setup](#setup) instructions below.
@@ -60,6 +62,7 @@ when deployed.
 ### Styling
 
 Use styles provided by `https://contentful.github.io/ui-extensions-sdk/cf-extension.css`
+ 
 
 ## Available commands
 
