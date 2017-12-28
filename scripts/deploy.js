@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const extensionConfig = require("../extension.json");
 const cli = require("contentful-extension-cli");
+const fs = require("fs");
 
 const client = cli.createClient({
   accessToken: process.env.CONTENTFUL_MANAGEMENT_ACCESS_TOKEN,
@@ -14,12 +15,23 @@ client.get(extensionConfig.id).then(handleFound, handleNotFound);
 function handleFound(extension) {
   // We need the version in case this was already saved.
   const version = extension.sys.version;
-  client.save({
+  save({
     version,
     ...extensionConfig
   });
 }
 
 function handleNotFound() {
-  client.save(extensionConfig);
+  save(extensionConfig);
+}
+
+function save(config) {
+  if (config.srcdoc) {
+    fs.readFile(config.srcdoc, "utf8", function(err, data) {
+      if (err) {
+        return console.log(err);
+      }
+      client.save(Object.assign({}, config, { srcdoc: data }));
+    });
+  }
 }

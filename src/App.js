@@ -42,8 +42,7 @@ class App extends Component {
           type="text"
           value={value}
           onChange={this.handleChangeValue}
-        />{" "}
-        <br />
+        />
         <button className="cf-btn-primary" onClick={this.handleClickUpdate}>
           Update
         </button>
