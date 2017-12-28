@@ -1,0 +1,6 @@
+{
+  "id": "backlink",
+  "name": "Backlink",
+  "srcdoc": "./public/index.html",
+  "fieldTypes": ["Link"]
+}
