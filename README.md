@@ -1,4 +1,6 @@
-# Contentful Backlink UI Extension
+# React-Based Contentful UI Extension
+
+This is a boilerplate for React-based UI Extensions.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
@@ -6,13 +8,24 @@ This project was "ejected" from `create-react-app` in order to add the `HtmlWebp
 production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
 requirement since Contentful expects all content to be in one `.html` file.
 
+## Using this boiler plate
+
+Follow the Setup instructions below
+
+Configure your `extension.json`
+
+Build up your extension out in `App.js`
+
+Change the `origin` remote for this project to your own Git repository and push it up
+
 ## Setup
 
-Clone project
+Clone this project
 
-`yarn`
+Install dependencies with `yarn`
 
-Configure `.env`
+Configure an `.env` file
+
 ```
 SPACE_ID={space id from contentful admin}
 CONTENTFUL_MANAGEMENT_ACCESS_TOKEN={management token from contentful admin}
