@@ -12,7 +12,7 @@ requirement since Contentful expects all content to be in one `.html` file.
 
 - Fully fledged React app, which is ideal for non-trivial UI extensions where a simple static web page just won't cut it.
 - Local development mode with mocked Extension SDK.
-- Simple build and deploy scripts
+- Simple build and deploy scripts.
 
 ## Using this boilerplate
 
