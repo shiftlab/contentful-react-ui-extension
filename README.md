@@ -20,6 +20,7 @@ Clone this repository into a new project:
 
 ```
 git clone git@github.com:shiftlab/contentful-react-ui-extension.git your-new-ui-extension
+cd your-new-ui-extension
 ```
 
 Follow the [Setup](#setup) instructions below.
