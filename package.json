@@ -47,7 +47,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "precommit": "lint-staged",
-    "prettier": "prettier --write \"src/**/*.js\""
+    "prettier": "prettier --write \"src/**/*.js\"",
+    "deploy-only": "node scripts/deploy.js",
+    "deploy": "npm-run-all -s build deploy-only"
   },
   "lint-staged": {
     "*.js": [
@@ -98,9 +100,11 @@
     "extends": "react-app"
   },
   "devDependencies": {
+    "contentful-extension-cli": "^2.0.0",
     "html-webpack-inline-source-plugin": "^0.0.9",
     "husky": "^0.14.3",
     "lint-staged": "^6.0.0",
+    "npm-run-all": "^4.1.2",
     "prettier": "^1.9.2"
   }
 }
