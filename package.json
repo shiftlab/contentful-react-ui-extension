@@ -88,5 +88,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "html-webpack-inline-source-plugin": "^0.0.9"
   }
 }
