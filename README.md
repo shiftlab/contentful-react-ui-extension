@@ -2,7 +2,7 @@
 
 This is a boilerplate for a React-based UI Extension for [Contentful](https://www.contentful.com/developers/docs/concepts/uiextensions/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). It was then "ejected" in order to add the `HtmlWebpackInlineSourcePlugin` plugin for our 
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). It was then "ejected" in order to add the `HtmlWebpackInlineSourcePlugin` plugin to our 
 production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
 requirement since Contentful expects all content to be in one `.html` file.
 
