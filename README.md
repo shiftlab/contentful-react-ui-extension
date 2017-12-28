@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
 requirement since Contentful expects all content to be in one `.html` file.
 
-![Screenshot](/screenshot.png)
+![screenshot](https://user-images.githubusercontent.com/1427475/34419128-1f9a6662-ebd0-11e7-966d-7a9c09069a27.png)
 
 ## Features
 
