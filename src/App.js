@@ -43,7 +43,10 @@ class App extends Component {
           value={value}
           onChange={this.handleChangeValue}
         />
-        <button className="cf-btn-primary" onClick={this.handleClickUpdate}>
+        <button
+          className="update-button cf-btn-primary"
+          onClick={this.handleClickUpdate}
+        >
           Update
         </button>
       </div>
