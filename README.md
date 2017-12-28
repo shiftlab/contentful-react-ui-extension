@@ -18,7 +18,7 @@ requirement since Contentful expects all content to be in one `.html` file.
 
 Follow the [Setup](#setup) instructions below.
 
-Configure your `extension.json`. More info the [Configuration](#configuration) section.
+Configure your `extension.json`. More info in the [Configuration](#configuration) section.
 
 Change the `origin` remote for this project to your own Git repository and push it up.
 
@@ -28,7 +28,7 @@ Build up your extension out in `App.js`. More info in the [Building your extensi
 
 Clone this project.
 
-Install dependencies with `yarn`.
+Install dependencies by running `yarn`.
 
 Configure an `.env` file:
 
@@ -39,34 +39,37 @@ CONTENTFUL_MANAGEMENT_ACCESS_TOKEN={management token from contentful admin}
 
 ## Configuration
 
-Configuration is done via a descriptor file called `extension.json`.
+UI Extension configuration options are provided with a descriptor file called `extension.json`.
  
 Details on configuring this file can be found [here](https://github.com/contentful/contentful-extension-cli#descriptor-files).
 
 ## Building your extension
 
-By default, all `App.js` does is initialize the [Contentful UI Extensions SDK](https://github.com/contentful/ui-extensions-sdk) 
-and pass the value down to `App.js`. So when your start this app for the first time, all you will see is a simple form field
-and Update button:
+By default, all `App.js` does is:
+1. Initialize the [Contentful UI Extensions SDK](https://github.com/contentful/ui-extensions-sdk) 
+2. Retrieve the current value of the field from the SDK
+3. Shows that value in an input field
+4. Provides a simple "Update" button which updates the field
+
+So when your start this app for the first time, all you will see is this:
 
 ```
 <input type="text" value="A value" />
 <button>Update</button>
 ```
 
-When you are running this app in development mode, locally, you'll see the value as "A value". "A value" comes from a call to our SDK wrapper, `api.js`.
+When you are running this app in development mode, you'll see the value as "A value". "A value" comes from a call to our SDK wrapper, `api.js`.
 
-There are two methods on `api.js`, `getValue` and `setValue`. These are used to interact with Contentful. The wrapper
-is set up so that when running locally in development mode, those methods are simply stubbed out. Calls to `getValue` 
+There are two methods on `api.js`, `getValue` and `setValue`. These are used to interact with the Contentful SDK. The wrapper
+is set up so that when running in development mode, those methods are simply stubbed out. Calls to `getValue` 
 will always return a static value configured inside of `api.js`. `setValue` will simply return an empty Promise.
  
-As your app grows, you'll want to evolve that mock to include behavior consistent with what you'd actually experience 
+As your app grows, you'll want to evolve the mock api to include behavior consistent with what you'd actually experience 
 when deployed.
 
 ### Styling
 
 Use styles provided by `https://contentful.github.io/ui-extensions-sdk/cf-extension.css`
- 
 
 ## Available commands
 
