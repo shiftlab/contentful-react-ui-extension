@@ -8,7 +8,7 @@ This project was "ejected" from `create-react-app` in order to add the `HtmlWebp
 production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
 requirement since Contentful expects all content to be in one `.html` file.
 
-## Using this boiler plate
+## Using this boilerplate
 
 Follow the [Setup](#setup) instructions below.
 
