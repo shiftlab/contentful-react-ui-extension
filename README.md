@@ -16,6 +16,12 @@ requirement since Contentful expects all content to be in one `.html` file.
 
 ## Using this boilerplate
 
+Clone this repository into a new project:
+
+```
+git clone git@github.com:shiftlab/contentful-react-ui-extension.git your-new-ui-extension
+```
+
 Follow the [Setup](#setup) instructions below.
 
 Configure your `extension.json`. More info in the [Configuration](#configuration) section.
