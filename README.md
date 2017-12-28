@@ -48,12 +48,11 @@ and Update button:
 <button>Update</button>
 ```
 
-When you are running this app in development mode, locally, "A value". "A value" comes from a call to our SDK wrapper,
-`api.js`.
+When you are running this app in development mode, locally, you'll see the value as "A value". "A value" comes from a call to our SDK wrapper, `api.js`.
 
 There are two methods on `api.js`, `getValue` and `setValue`. These are used to interact with Contentful. The wrapper
-is set up, so that when running locally in development mode, those methods are simply stubbed out. Calls to `getValue` 
-will always return a static value configured inside of `api.js`. `setValue` will simply return an empty promise.
+is set up so that when running locally in development mode, those methods are simply stubbed out. Calls to `getValue` 
+will always return a static value configured inside of `api.js`. `setValue` will simply return an empty Promise.
  
 As your app grows, you'll want to evolve that mock to include behavior consistent with what you'd actually experience 
 when deployed.
