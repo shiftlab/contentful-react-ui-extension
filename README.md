@@ -2,23 +2,27 @@
 
 This is a boilerplate for a React-based UI Extension for [Contentful](https://www.contentful.com/developers/docs/concepts/uiextensions/).
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-This project was "ejected" from `create-react-app` in order to add the `HtmlWebpackInlineSourcePlugin` plugin for our 
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). It was then "ejected" in order to add the `HtmlWebpackInlineSourcePlugin` plugin for our 
 production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
 requirement since Contentful expects all content to be in one `.html` file.
 
 ![Screenshot](/screenshot.png)
 
+## Features
+
+- Fully fledged React app, which is ideal for non-trivial UI extensions where a simple static web page just won't cut it.
+- Local development mode with mocked Extension SDK.
+- Simple build and deploy scripts
+
 ## Using this boilerplate
 
 Follow the [Setup](#setup) instructions below.
 
-Configure your `extension.json`. More info [here](#configuration) .
-
-Build up your extension out in `App.js`. More info [here](#building-your-extension).   
+Configure your `extension.json`. More info the [Configuration](#configuration) section.
 
 Change the `origin` remote for this project to your own Git repository and push it up.
+
+Build up your extension out in `App.js`. More info in the [Building your extension](#building-your-extension) section.
 
 ## Setup
 
