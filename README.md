@@ -65,12 +65,22 @@ So when your start this app for the first time, all you will see is this:
 <button>Update</button>
 ```
 
-When you are running this app in development mode, you'll see the value as "A value". "A value" comes from a call to our SDK wrapper, `api.js`.
+When you are running this app in development mode, you'll see the value as "A value". "A value" comes from a call to our mocked SDK, which is defined in `api.js`.
 
-There are two methods on `api.js`, `getValue` and `setValue`. These are used to interact with the Contentful SDK. The wrapper
-is set up so that when running in development mode, those methods are simply stubbed out. Calls to `getValue` 
+`api.js` currently mocks out two methods in development mode; `getValue` and `setValue`. Calls to `getValue` 
 will always return a static value configured inside of `api.js`. `setValue` will simply return an empty Promise.
- 
+
+For other methods from the SDK that are not mocked out, you can easily provide your own mock implementation in `api.js` as you need them. Ex:
+
+```
+  space: {
+    // Mocks https://contentful.github.io/contentful.js/contentful/5.0.5/ContentfulClientAPI.html#.getEntry
+    getEntry: id => {
+      return Promise.resolve(mockEntry);
+    }
+  }
+```
+
 As your app grows, you'll want to evolve the mock api to include behavior consistent with what you'd actually experience 
 when deployed.
 
