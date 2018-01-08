@@ -3,8 +3,8 @@
 This is a boilerplate for a React-based UI Extension for [Contentful](https://www.contentful.com/developers/docs/concepts/uiextensions/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app). It was then "ejected" in order to add the `HtmlWebpackInlineSourcePlugin` plugin to our 
-production webpack configuration, which allows us to inline all Javascript and CSS into our `index.html` file. This is a
-requirement since Contentful expects all content to be in one `.html` file.
+production webpack configuration, which allows us to inline all Javascript and CSS into a single `index.html` file. This is a
+requirement since UI Extensions expects all content to be in a single file.
 
 ![screenshot](https://user-images.githubusercontent.com/1427475/34419128-1f9a6662-ebd0-11e7-966d-7a9c09069a27.png)
 
@@ -29,7 +29,7 @@ Configure your `extension.json`. More info in the [Configuration](#configuration
 
 Change the `origin` remote for this project to your own Git repository and push it up.
 
-Build up your extension out in `App.js`. More info in the [Building your extension](#building-your-extension) section.
+Build up your extension in `App.js`. More info in the [Building your extension](#building-your-extension) section.
 
 ## Setup
 
@@ -52,13 +52,13 @@ Details on configuring this file can be found [here](https://github.com/contentf
 
 ## Building your extension
 
-By default, all `App.js` does is:
+By default, `App.js` does the following:
 1. Initialize the [Contentful UI Extensions SDK](https://github.com/contentful/ui-extensions-sdk) 
 2. Retrieve the current value of the field from the SDK
 3. Shows that value in an input field
 4. Provides a simple "Update" button which updates the field
 
-So when your start this app for the first time, all you will see is this:
+So when your start this app for the first time, you will simple see this:
 
 ```
 <input type="text" value="A value" />
@@ -68,7 +68,7 @@ So when your start this app for the first time, all you will see is this:
 When you are running this app in development mode, you'll see the value as "A value". "A value" comes from a call to our mocked SDK, which is defined in `api.js`.
 
 `api.js` currently mocks out two methods in development mode; `getValue` and `setValue`. Calls to `getValue` 
-will always return a static value configured inside of `api.js`. `setValue` will simply return an empty Promise.
+will always return a static value configured inside of `api.js`. `setValue` will simply return an empty Promise, also defined in `api.js`.
 
 For other methods from the SDK that are not mocked out, you can easily provide your own mock implementation in `api.js` as you need them. Ex:
 
